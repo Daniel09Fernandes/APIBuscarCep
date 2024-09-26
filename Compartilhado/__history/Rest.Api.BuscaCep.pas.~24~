@@ -1,0 +1,43 @@
+unit Rest.Api.BuscaCep;
+
+interface
+
+uses Rest.Client;
+
+Type
+  TRestApiBuscaCep = class
+  private
+   Class var FStatusCode:Integer;
+  public
+    class property StatusCode:integer read FStatusCode  write FStatusCode;
+    class Function ExecutarRequisicao(ACep:String): String;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TRestApiBuscaCep }
+
+class function TRestApiBuscaCep.ExecutarRequisicao(ACep:String): String;
+  var FRestRequest : TRESTRequest;
+  var FRestClient :  TRESTClient;
+begin
+  FRestClient := TRESTClient.Create('http://localhost:9000/BuscarCep/'+ACep);
+  FRestRequest := TRESTRequest.Create(FRestClient);
+  try
+    FRestClient.Accept := '*/*';
+    FRestClient.AcceptCharset := 'utf-8';
+    FRestRequest.Client := FRestClient;
+
+    FRestRequest.Execute;
+    StatusCode := FRestRequest.Response.StatusCode;
+    Result:= FRestRequest.Response.JSONText;
+  finally
+    FreeAndNil(FRestClient);
+    FreeAndNil(FRestRequest);
+  end;
+end;
+
+end.

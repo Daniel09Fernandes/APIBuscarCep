@@ -1,0 +1,56 @@
+unit Startup;
+
+interface
+uses System.SysUtils,
+     Horse,
+     Busca.Cep.Controller,
+     System.Classes,
+     System.SyncObjs;
+
+Procedure StartServer;
+
+implementation
+
+procedure StartHorse;
+begin
+  Writeln('Horse rodando na porta:9000');
+  Writeln('Servidor Iniciado!');
+  Writeln;
+  Writeln('Pressione qualquer tecla para, parar o servidor...');
+  TBuscaCepController.GetInstance.Rotas;
+  THorse.Listen(9000);
+end;
+
+Procedure StartServer;
+var
+  ServerThread: TThread;
+  StopEvent: TEvent;
+begin
+  StopEvent := TEvent.Create(nil, True, False, '');
+  try  //Necessario rodar dentro da thread, para liberar o terminal, e poder interagir, para parar o servidor horse
+    ServerThread := TThread.CreateAnonymousThread(
+      procedure
+      begin
+        StartHorse;
+      end);
+    ServerThread.FreeOnTerminate := True;
+    ServerThread.Start;
+
+    //Colocando o terminal em espera
+    Readln;
+    Writeln('O Servidor está sendo encerrado!');
+    StopEvent.SetEvent;  //Atualiza o evento
+    THorse.StopListen;
+
+    // Aguarde a thread do servidor terminar
+    ServerThread.WaitFor;
+  finally
+    // Libera a controller da memoria
+    TBuscaCepController.FreeInstance;
+    StopEvent.Free;
+    ServerThread := nil;
+  end;
+end;
+
+
+end.

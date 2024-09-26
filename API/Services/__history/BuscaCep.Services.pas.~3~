@@ -1,0 +1,36 @@
+unit BuscaCep.Services;
+
+interface
+ uses BuscaCep.Repository;
+
+ Type
+   IBuscaCepServices = interface
+     ['{855BAA7D-78EA-4334-BD62-B10E09D6A4BA}']
+
+     Function GetCep:String;
+   end;
+
+   TBuscaCepServices = class(TInterfacedObject, IBuscaCepServices)
+    Private
+
+    Public
+    constructor Create(BuscaCepRepository: IBuscaCepRepository<>); override;
+    Function GetCep:String;
+   end;
+
+implementation
+
+{ TBuscaCepServices }
+
+constructor TBuscaCepServices.Create(AOwner: TComponent);
+begin
+  inherited;
+
+end;
+
+function TBuscaCepServices.GetCep: String;
+begin
+
+end;
+
+end.

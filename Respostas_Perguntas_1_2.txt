@@ -1,0 +1,30 @@
+1- A Arquitetura MCV é um padrão de projeto muito utilizado e tem por objetivo dividir os softwares em 3 camadas.
+Camada de visualização (Viwer), camada de controle (Controller) e a camada da Modelo (Model). 
+Cada uma dessas camadas tem sua responsabilidade, e sua responsabilidade deve ser única. 
+View: responsável por toda a parte visual que interage com o usuário. 
+Controller: Cria as rotas para que a view possa se comunicar com a Model.
+Model: Cuida da lógica, a aplicação das regras de negócios, ficaram nesta camada.
+
+2- Patrão de projeto Factory: 
+- Conceito: A Factory é um padrão de projeto criacional que define uma interface para
+            criar objetos em uma superclasse, mas permite que as subclasses alterem o tipo de objetos que serão criados.
+            Isso promove a flexibilidade e reutilização de codigo.
+Objetivo: 
+  Reduzir o acoplamento.
+  Aumentar a flexibilidade.
+  Isolar o código de criação de objetos.
+
+Cenário de Uso
+  Em um ERP, que podemos ter os objetos relacionados a pessoas, física e/ou jurídica, a factory pode nos ajudar.
+  Utilizando a Factory, você pode criar uma fábrica que decide qual tipo de pessoa vai instanciar com base em um parâmetro. 
+
+Por exemplo: 
+function TPessoaFactory.CriarPessoa(Tipo: string): IPessoa;
+begin
+  if Tipo = 'Juridica' then
+    Result := TPessoaJuridica.Create
+  else if Tipo = 'Fisica' then
+    Result := TPessoaFisica.Create
+  else
+    Result := nil;
+end;

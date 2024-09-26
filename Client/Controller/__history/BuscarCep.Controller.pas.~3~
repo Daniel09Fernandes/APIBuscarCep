@@ -1,0 +1,11 @@
+unit BuscarCep.Controller;
+
+interface
+ Type
+   TBuscarCepController = class
+
+   end;
+
+implementation
+
+end.

@@ -1,0 +1,4 @@
+25/09/2024 23:26:48: TBuscaCepRepository.GetCep: TClientSocket<TApiCepModel> REST request failed: Error sending data: (12007) O nome ou o endereço do servidor não pôde ser resolvido
+25/09/2024 23:29:45: TBuscaCepRepository.GetCep: TClientSocket<TApiCepModel> REST request failed: Error sending data: (12007) O nome ou o endereço do servidor não pôde ser resolvido
+25/09/2024 23:34:03: TBuscaCepRepository.GetCep: TClientSocket<TApiCepModel> REST request failed: Error sending data: (12007) O nome ou o endereço do servidor não pôde ser resolvido
+25/09/2024 23:39:30: TBuscaCepRepository.GetCep: TClientSocket<TApiCepModel> REST request failed: Error sending data: (12007) O nome ou o endereço do servidor não pôde ser resolvido

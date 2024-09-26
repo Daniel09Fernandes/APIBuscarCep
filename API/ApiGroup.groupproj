@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{19E4D856-E313-49A0-923D-A376AB24DDCD}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Api.Cep.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DUnit\ApiCepTests.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\Client\BuscaCep.Client.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Api_Cep">
+        <MSBuild Projects="Api.Cep.dproj"/>
+    </Target>
+    <Target Name="Api_Cep:Clean">
+        <MSBuild Projects="Api.Cep.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Api_Cep:Make">
+        <MSBuild Projects="Api.Cep.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ApiCepTests">
+        <MSBuild Projects="DUnit\ApiCepTests.dproj"/>
+    </Target>
+    <Target Name="ApiCepTests:Clean">
+        <MSBuild Projects="DUnit\ApiCepTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ApiCepTests:Make">
+        <MSBuild Projects="DUnit\ApiCepTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BuscaCep_Client">
+        <MSBuild Projects="..\Client\BuscaCep.Client.dproj"/>
+    </Target>
+    <Target Name="BuscaCep_Client:Clean">
+        <MSBuild Projects="..\Client\BuscaCep.Client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BuscaCep_Client:Make">
+        <MSBuild Projects="..\Client\BuscaCep.Client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Api_Cep;ApiCepTests;BuscaCep_Client"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Api_Cep:Clean;ApiCepTests:Clean;BuscaCep_Client:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Api_Cep:Make;ApiCepTests:Make;BuscaCep_Client:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,27 @@
+unit BuscarCep.Controller;
+
+interface
+uses BuscarCep.Model, BuscarCep.Entity;
+ Type
+   TBuscarCepController = class
+    private
+    public
+      constructor Create;
+      function BuscaCep: TBuscarCepEntity;
+   end;
+
+implementation
+
+{ TBuscarCepController }
+
+class function TBuscarCepController.BuscaCep: TBuscarCepEntity;
+begin
+
+end;
+
+constructor TBuscarCepController.Create(AOwner: TComponent);
+begin
+
+end;
+
+end.

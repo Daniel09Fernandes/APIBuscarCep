@@ -1,0 +1,36 @@
+unit BuscarCep.Controller;
+
+interface
+uses BuscarCep.Model, BuscarCep.Entity;
+ Type
+   TBuscarCepController = class
+    private
+     FModel : TBuscarCepModel;
+    public
+      constructor Create;
+      destructor Destroy; override;
+
+      function BuscaCep: TBuscarCepEntity;
+   end;
+
+implementation
+
+{ TBuscarCepController }
+
+function TBuscarCepController.BuscaCep: TBuscarCepEntity;
+begin
+
+end;
+
+constructor TBuscarCepController.Create;
+begin
+  FModel := TBuscarCepModel.Create;
+end;
+
+destructor TBuscarCepController.Destroy;
+begin
+
+  inherited;
+end;
+
+end.

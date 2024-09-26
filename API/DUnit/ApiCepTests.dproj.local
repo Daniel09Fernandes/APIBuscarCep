@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/09/25 17:12:17.000.479,=D:\Fontes\TOTVS-CEP\API\DUnit\TestBusca.Cep.pas</Transaction>
+    <Transaction>2024/09/25 17:12:19.000.044,=D:\Fontes\TOTVS-CEP\API\Controller\Busca.Cep.Controller.pas</Transaction>
+    <Transaction>2024/09/25 21:59:00.000.760,D:\Fontes\TOTVS-CEP\API\Controller\Busca.Cep.Controller.pas=</Transaction>
+    <Transaction>2024/09/25 22:13:03.000.316,=D:\Fontes\TOTVS-CEP\Compartilhado\Rest.Api.BuscaCep.pas</Transaction>
+  </Transactions>
+</BorlandProject>

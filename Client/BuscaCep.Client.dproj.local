@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/05/31 23:32:58.000.340,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/06/03 20:21:45.000.593,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/07/17 21:04:40.000.994,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/07/17 21:11:49.000.069,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/09/25 21:25:47.000.705,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/09/25 21:26:31.000.558,C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.fmx=D:\Fontes\TOTVS-CEP\Client\View\BuscaCep.view.fmx</Transaction>
+    <Transaction>2024/09/25 21:26:31.000.558,C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas=D:\Fontes\TOTVS-CEP\Client\View\BuscaCep.view.pas</Transaction>
+    <Transaction>2024/09/25 21:26:48.000.566,C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Project2.dproj=D:\Fontes\TOTVS-CEP\Client\BuscaCep.Client.dproj</Transaction>
+    <Transaction>2024/09/25 21:52:54.000.722,=D:\Fontes\TOTVS-CEP\Client\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 21:53:12.000.632,D:\Fontes\TOTVS-CEP\Client\Unit1.pas=D:\Fontes\TOTVS-CEP\Client\Controller\BuscarCep.Controller.pas</Transaction>
+    <Transaction>2024/09/25 21:54:16.000.680,=D:\Fontes\TOTVS-CEP\Client\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 21:54:32.000.297,D:\Fontes\TOTVS-CEP\Client\Unit1.pas=D:\Fontes\TOTVS-CEP\Client\Model\BuscarCep.Model.pas</Transaction>
+    <Transaction>2024/09/25 21:56:59.000.523,=D:\Fontes\TOTVS-CEP\Client\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 21:57:18.000.091,D:\Fontes\TOTVS-CEP\Client\Unit1.pas=D:\Fontes\TOTVS-CEP\Client\DTO\BuscarCep.Entity.pas</Transaction>
+    <Transaction>2024/09/25 22:04:32.000.392,=D:\Fontes\TOTVS-CEP\Client\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 22:05:27.000.399,D:\Fontes\TOTVS-CEP\Client\Unit1.pas=D:\Fontes\TOTVS-CEP\Compartilhado\Rest.Api.BuscaCep.pas</Transaction>
+    <Transaction>2024/09/25 22:47:13.000.947,=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.AwesomeApi.Model.pas</Transaction>
+    <Transaction>2024/09/25 22:47:13.000.896,=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Apicep.Model.pas</Transaction>
+    <Transaction>2024/09/25 22:47:14.000.037,=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Viacep.Model.pas</Transaction>
+    <Transaction>2024/09/25 22:49:46.000.380,=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Model.pas</Transaction>
+    <Transaction>2024/09/25 23:07:25.000.611,=D:\Fontes\TOTVS-CEP\API\Modules\Gerador.Logs.pas</Transaction>
+  </Transactions>
+</BorlandProject>

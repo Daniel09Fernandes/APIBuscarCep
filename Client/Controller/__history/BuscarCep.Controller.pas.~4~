@@ -1,0 +1,14 @@
+unit BuscarCep.Controller;
+
+interface
+uses BuscarCep.Model;
+ Type
+   TBuscarCepController = class
+    private
+    public
+
+   end;
+
+implementation
+
+end.

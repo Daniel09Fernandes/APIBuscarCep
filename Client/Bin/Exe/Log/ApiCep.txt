@@ -1,0 +1,2 @@
+25/09/2024 23:35:13: TBuscarCepModel.BuscaCep: Erro ao assinar o json
+26/09/2024 00:01:50: TBuscarCepModel.BuscaCep: REST request failed: Error sending data: (12029) Uma conexão com o servidor não pôde ser estabelecida

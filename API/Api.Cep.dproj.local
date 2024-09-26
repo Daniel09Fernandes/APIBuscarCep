@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/05/31 23:32:58.000.340,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/06/03 20:21:45.000.593,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/07/17 21:04:40.000.994,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/07/17 21:11:49.000.069,=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/09/25 10:03:19.000.472,D:\Fontes\TOTVS-CEP\API\Api.Cep.dproj=C:\Users\danie\OneDrive\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2024/09/25 10:28:18.000.502,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 10:29:18.000.948,D:\Fontes\TOTVS-CEP\API\Controller\Busca.Cep.Controller.pas=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 11:25:06.000.062,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 11:25:50.000.996,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Viacep.Model.pas</Transaction>
+    <Transaction>2024/09/25 11:27:02.000.447,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 11:27:45.000.333,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Apicep.Model.pas</Transaction>
+    <Transaction>2024/09/25 11:28:56.000.342,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 11:29:39.000.330,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.AwesomeApi.Model.pas</Transaction>
+    <Transaction>2024/09/25 11:49:14.000.568,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 11:49:48.000.326,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Modules\Cliente.Socket.pas</Transaction>
+    <Transaction>2024/09/25 12:44:56.000.659,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 12:45:40.000.078,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Repository\BuscaCep.Repository.pas</Transaction>
+    <Transaction>2024/09/25 12:46:09.000.980,D:\Fontes\TOTVS-CEP\API\Modules\Cliente.Socket.pas=D:\Fontes\TOTVS-CEP\API\Modules\Client.Socket.pas</Transaction>
+    <Transaction>2024/09/25 13:21:24.000.071,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 13:21:50.000.522,D:\Fontes\TOTVS-CEP\API\Services\BuscaCep.Services.pas=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 13:48:33.000.976,=D:\Fontes\TOTVS-CEP\API\Services\BuscaCep.Services.pas</Transaction>
+    <Transaction>2024/09/25 13:48:42.000.903,=D:\Fontes\TOTVS-CEP\API\Repository\BuscaCep.Repository.pas</Transaction>
+    <Transaction>2024/09/25 13:48:54.000.032,=D:\Fontes\TOTVS-CEP\API\Modules\Client.Socket.pas</Transaction>
+    <Transaction>2024/09/25 13:49:11.000.834,=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Viacep.Model.pas</Transaction>
+    <Transaction>2024/09/25 13:49:11.000.725,=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Apicep.Model.pas</Transaction>
+    <Transaction>2024/09/25 13:49:11.000.779,=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.AwesomeApi.Model.pas</Transaction>
+    <Transaction>2024/09/25 13:49:38.000.146,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 13:49:49.000.046,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Startup.pas</Transaction>
+    <Transaction>2024/09/25 14:39:56.000.817,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 14:40:17.000.966,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Modules\Gerador.Logs.pas</Transaction>
+    <Transaction>2024/09/25 14:56:01.000.359,=D:\Fontes\TOTVS-CEP\API\Unit1.pas</Transaction>
+    <Transaction>2024/09/25 14:56:19.000.744,D:\Fontes\TOTVS-CEP\API\Unit1.pas=D:\Fontes\TOTVS-CEP\API\Model\Busca.Cep.Model.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Controller"/>
+    <File Path="Controller\Busca.Cep.Controller.pas"/>
+    <File Path="Model"/>
+    <File Path="Model\Busca.Cep.Apicep.Model.pas"/>
+    <File Path="Model\Busca.Cep.AwesomeApi.Model.pas"/>
+    <File Path="Model\Busca.Cep.Model.pas"/>
+    <File Path="Model\Busca.Cep.Viacep.Model.pas"/>
+    <File Path="Modules"/>
+    <File Path="Modules\Client.Socket.pas"/>
+    <File Path="Modules\Gerador.Logs.pas"/>
+    <File Path="Repository"/>
+    <File Path="Repository\BuscaCep.Repository.pas"/>
+    <File Path="Services"/>
+    <File Path="Services\BuscaCep.Services.pas"/>
+    <File Path="Startup.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>

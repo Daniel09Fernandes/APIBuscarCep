@@ -1,0 +1,125 @@
+unit BuscaCep.Repository;
+
+interface
+
+uses Client.Socket, System.SysUtils, System.Classes,
+  System.Generics.Collections, REST.Json,Gerador.Logs,
+
+  // Models
+  Busca.Cep.Viacep.Model,
+  Busca.Cep.ApiCep.Model,
+  Busca.Cep.AwesomeApi.Model;
+
+type
+  IBuscaCepRepository<T> = interface
+    ['{D60B0B13-9EC9-446A-8BD9-58778D14F394}']
+    function GetCep(ACep: string): T;
+  end;
+
+  TBuscaCepRepository = class(TInterfacedObject, IBuscaCepRepository<String>)
+  private
+    const
+      URL_VIACEP     = 'https://viacep.com.br/ws/';
+      URL_AWESOMEAPI ='https://cep.awesomeapi.com.br/json/';
+      URL_APICEP     = 'https://cdn.apicep.com/file/apicep/';
+
+    function AjustaCepParaViaCep(ACep: String): string;
+  public
+    function GetCep(ACep: string): String;
+  end;
+
+implementation
+
+{ TTBuscaCepRepository<T> }
+
+function TBuscaCepRepository.AjustaCepParaViaCep(ACep: String): string;
+begin
+  Result := ACep;
+
+  if not ACep.Contains('-') then
+    Result := Copy(ACep, 0, length(ACep) - 3) + '-' +
+      Copy(ACep, length(ACep) - 4);
+end;
+
+function TBuscaCepRepository.GetCep(ACep: string): String;
+var
+  lbSucess: Boolean;
+begin
+  lbSucess := false;
+  try
+    var
+    Socket := TClientSocket<TApiCepModel>.Create(nil, URL_VIACEP +
+                                         AjustaCepParaViaCep(ACep) + '.json');
+    try
+      var
+        Model: TApiCepModel := Socket.get;
+
+      lbSucess := Assigned(Model) and (Model.Status = 200);
+
+      if lbSucess then
+        Result := TJson.ObjectToJsonString(Model);
+
+      Model.Free;
+    finally
+      Socket.Free;
+    end;
+  except
+    on E:Exception do
+    begin
+      TLog.GravarLog('TBuscaCepRepository.GetCep: TClientSocket<TApiCepModel> '+E.Message);
+      lbSucess := false;
+    end;
+  end;
+
+  if Not lbSucess then
+  try
+    var
+    Socket := TClientSocket<TViaCepModel>.Create(nil, URL_VIACEP + ACep.Replace('-','')+'/json/');
+    try
+      var
+      Model : TViaCepModel := Socket.get;
+
+      lbSucess := Assigned(Model) and (not Model.Cep.Trim.IsEmpty);
+
+      if lbSucess then
+        Result := TJson.ObjectToJsonString(Model);
+
+      Model.Free;
+    finally
+      Socket.Free;
+    end;
+  except
+    on E:Exception do
+    begin
+      TLog.GravarLog('TBuscaCepRepository.GetCep: TClientSocket<TApiCepModel> '+E.Message);
+      lbSucess := false;
+    end;
+  end;
+
+  if Not lbSucess then
+  try
+    var
+    Socket := TClientSocket<TAwensomeCepModel>.Create(nil, URL_AWESOMEAPI + ACep.Replace('-',''));
+    try
+      var
+      Model: TAwensomeCepModel := Socket.get;
+
+      lbSucess := Assigned(Model) and (not Model.Cep.Trim.IsEmpty);
+
+      if lbSucess then
+        Result := TJson.ObjectToJsonString(Model);
+
+      Model.Free;
+    finally
+      Socket.Free;
+    end;
+  except
+    on E:Exception do
+    begin
+      TLog.GravarLog('TBuscaCepRepository.GetCep: TClientSocket<TApiCepModel> '+E.Message);
+      lbSucess := false;
+    end;
+  end;
+end;
+
+end.
